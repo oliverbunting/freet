@@ -1,0 +1,45 @@
+cabal-version: 1.12
+
+name:           freet
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/oliverbunting/freet#readme>
+homepage:       https://github.com/oliverbunting/freet#readme
+bug-reports:    https://github.com/oliverbunting/freet/issues
+author:         Oliver Bunting
+maintainer:     oliverbunting@gmail.com
+copyright:      2021 Oliver Bunting
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/oliverbunting/freet
+
+library
+  hs-source-dirs: src
+  exposed-modules: Control.Monad.Constrained.FreeT.Linear
+
+  default-extensions:
+    ConstraintKinds
+    GADTs
+    LambdaCase
+    LinearTypes
+    RankNTypes
+    NoImplicitPrelude
+
+  ghc-options:
+    -Wall -Wcompat
+    -haddock
+
+  other-modules:
+      Paths_freet
+
+  build-depends:
+      base >=4.7 && <5
+    , linear-base >= 0.1.0
+
+  default-language: Haskell2010
